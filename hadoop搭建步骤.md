@@ -140,6 +140,7 @@ b12.el7_3.x86_64"
 $vim /opt/hadoop/etc/hadoop/core-site.xml  
 
 <configuration>  
+
     <property>  
         <name>fs.defaultFS</name>  
         <value>hdfs://master:9000</value>  
@@ -155,6 +156,7 @@ $vim /opt/hadoop/etc/hadoop/core-site.xml
 $vim /opt/hadoop/etc/hadoop/hdfs-site.xml
   
 <configuration>  
+
     <property>  
          <name>dfs.namenode.name.dir</name>  
          <value>file:///home/hadoop/hd/hdfs/namenode</value>  
@@ -171,12 +173,14 @@ $vim /opt/hadoop/etc/hadoop/hdfs-site.xml
          <name>dfs.replication</name>  
          <value>2</value>  
     </property>  
+	
 </configuration>  
 
 6.修改配置文件yarn-site.xml  
 $vim /opt/hadoop/etc/hadoop/yarn-site.xml  
 
 <configuration>  
+
     <property>  
         <name>yarn.nodemanager.aux-services</name>  
         <value>mapreduce_shuffle</value>  
@@ -231,13 +235,15 @@ $vim /opt/hadoop/etc/hadoop/yarn-site.xml
      <property>  
         <name>yarn.nodemanager.vmem-check-enabled</name>  
         <value>false</value>  
-     </property>  
+     </property>
+	 
 </configuration>  
 
 7.修改配置文件mapred-site.xml  
 $vim /opt/hadoop/etc/hadoop/mapred-site.xml  
 
 <configuration>
+
     <property>
        <name>mapreduce.framework.name</name>
        <value>yarn</value>
@@ -250,6 +256,7 @@ $vim /opt/hadoop/etc/hadoop/mapred-site.xml
        <name>mapreduce.job.tracker</name>
        <value>master:49001</value>
     </property>
+	
 </configuration>
 
 上述配置在三台机器上相同。  
@@ -285,7 +292,8 @@ $cd /opt/hive/conf
 $cp hive-site.xml.template hive-site.xml  
 $vim hive-site.xml  
 
-<configuration>  
+<configuration> 
+ 
   <property>  
     <name>javax.jdo.option.ConnectionURL</name>
 <value>jdbc:mysql://192.168.222.133:3306/hive?createDatabaseIfNotExist=true</value>
@@ -327,6 +335,7 @@ $vim hive-site.xml
     <name>hive.server2.logging.operation.log.location</name>
     <value>/home/hadoop/hd/data/hive/operation</value>
   </property>
+  
 </configuration>
 
 3.修改/etc/profile文件，添加必要环境变量。  
@@ -467,6 +476,7 @@ $mv hbase-1.3.1-bin.tar.gz hbase
 $vim /opt/hbase/conf/hbase-site.xml  
 
 <configuration>  
+
   <property>
     <name>hbase.cluster.distributed</name>
     <value>true</value>
@@ -491,6 +501,7 @@ $vim /opt/hbase/conf/hbase-site.xml
     <name>hbase.zookeeper.property.clientPort</name>
     <value>2181</value>
   </property>
+  
 </configuration>  
 
 3.修改/opt/hbase/conf/hbase-env.sh，加入jdk目录  
