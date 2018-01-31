@@ -65,8 +65,9 @@ $java -version
 3.克隆两台机器
 在VMWare软件菜单栏，选“虚拟机”->“管理”->“克隆”，如下图：
 
+ ![avatar](/pictures/1.png)
  
-
+ ![avatar](/pictures/2.png)
  
 
 之后，分别配置两台机器的静态IP，主要修改/etc/sysconfig/network-scripts/ifcfg-eh0，将ifcfg-eth0改为不同的名字，并在文件内更改IPADDR和HWADDR
@@ -93,7 +94,7 @@ $sudo scp /etc/hosts root@slave1:/etc
 
 （4）在master上使用hadoop用户登录，执行$ssh-keygen -t rsa命令产生公钥。
 $ssh-keygen -t rsa
- 
+  ![avatar](/pictures/3.png)
 
 （5）将公钥复制到slave1和slave2上（这里输入slave1和slave2密码）。
 $ssh-copy-id -i ~/.ssh/id_rsa.pub slave1
@@ -116,6 +117,8 @@ $mv /home/hadoop/tmp/hadoop-2.8.1.tar.gz /opt/
 $tar -zvxf hadoop-2.8.1.tar.gz
 #将解压文件重命名hadoop
 $mv hadoop-2.8.1.tar.gz hadoop
+
+ ![avatar](/pictures/4.png)
  
 2.配置环境变量
 $vim ~/.bashrc
@@ -271,7 +274,7 @@ $mv /home/hadoop/tmp/apache-hive-2.3.0-bin.tar.gz /opt/
 $tar -zvxf apache-hive-2.3.0-bin.tar.gz
 #将解压文件重命名hadoop
 $mv apache-hive-2.3.0-bin.tar.gz hive
-
+ ![avatar](/pictures/5.png)
  
 2.配置hive-site.xml（没有的话，可将hive-site.xml.template复制一份，更名）
 $cd /opt/hive/conf
@@ -330,6 +333,7 @@ export PATH="$HIVE_HOME/bin:$PATH"
 4.复制相关jar包。
 （1）把mariadb驱动包（mariadb-java-client-2.0.3.jar）拷到hive的lib目录（下载链接：mariadb-java-client-2.1.0.tar.gz,通过Xftp传到
 /home/hadoop/tmp）（mariadb安装在小节后面）
+ ![avatar](/pictures/6.png)
  
 $cp /home/hadoop/tmp/mariadb-java-client-2.0.3.jar /opt/hive/lib
 （2）将hive的lib下jline包拷贝到/opt/hadoop/share/hadoop/yarn/lib下，并删除旧版本jline包。
@@ -339,7 +343,7 @@ $cp /opt/hive/lib/jline-2.12.jar /opt/hadoop/share/hadoop/yarn/lib
 $$HIVE_HOME/bin/./hive
 
 之后进入hive中，即可使用hive数据库（操作等同mysql）,如下图。
- 
+  ![avatar](/pictures/7.png)
 
 常见问题：
 1.报“Access denied …”，更换数据库用户名及密码，并更改配置
@@ -498,9 +502,9 @@ $cd /opt/hbase/bin
 $./start-hbase.sh
 $./hbase shell
  
-
+ ![avatar](/pictures/8.png)
  
-
+ ![avatar](/pictures/9.png)
 
 常见问题：
 1.创建表时，报“can‘t get master address from zookeeper znode = null …”， 查看hbase.rootdir 与core-site.xml中fs.defaultFS端口是否一致，
