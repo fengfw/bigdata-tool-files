@@ -1,9 +1,8 @@
 #第一步建立一个sql文件  
 vi *.sql  
 use default;  
-create external table A2_REAL_MIX(ORG_NAME string,FILLING_DT string,YEAR_MONTH string,CUST_NM string,EMP_NMN string,EMP_NM_E string,C  
-ERTI_TYPE string,CERTI_ID string,CANBAODI string,YANGLAO_COMP NUMBER) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TEXTFI  
-LE;  
+create external table A2_REAL_MIX(ORG_NAME string,FILLING_DT string,YEAR_MONTH string,CUST_NM string,EMP_NMN string,EMP_NM_E string,  
+CERTI_TYPE string,CERTI_ID string,CANBAODI string,YANGLAO_COMP NUMBER) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TEXTFILE;    
   
 #第二部建立一个shell脚本  
 vi t  
