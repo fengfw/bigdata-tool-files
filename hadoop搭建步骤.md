@@ -291,50 +291,49 @@ $mv apache-hive-2.3.0-bin.tar.gz hive
 $cd /opt/hive/conf  
 $cp hive-site.xml.template hive-site.xml  
 $vim hive-site.xml  
-  
-<configuration>   
- 
-  <property>  
-    <name>javax.jdo.option.ConnectionURL</name>  
-<value>jdbc:mysql://192.168.222.133:3306/hive?createDatabaseIfNotExist=true</value>  
-  </property>  
-  <property>  
-    <name>javax.jdo.option.ConnectionDriverName</name>  
-    <value>org.mariadb.jdbc.Driver</value>  
-  </property>  
-  <property>  
-    <name>javax.jdo.option.ConnectionUserName</name>  
-    <value>hive1</value>  
-  </property>  
-  <property>  
-    <name>javax.jdo.option.ConnectionPassword</name>  
-    <value>hive1</value>  
-  </property>  
-  <property>  
 
-   <name>hive.metastore.schema.verification</name>  
-   <value>false</value>  
-</property>  
-  <property>  
-    <name>hive.metastore.warehouse.dir</name>  
-    <value>hdfs://master:9000/user/hive/warehouse</value>  
-  </property>  
-  <property>  
-    <name>hive.exec.local.scratchdir</name>  
-    <value>/home/hadoop/hd/data/hive/scratchdir</value>  
-  </property>  
-  <property>  
-    <name>hive.downloaded.resources.dir</name>  
-    <value>/home/hadoop/hd/data/hive/resourcesdir</value>  
-  </property>  
-  <property>  
-    <name>hive.querylog.location</name>  
-    <value>/home/hadoop/hd/data/hive/querylog</value>  
-  </property>  
-  <property>  
-    <name>hive.server2.logging.operation.log.location</name>  
-    <value>/home/hadoop/hd/data/hive/operation</value>  
-  </property>  
+<configuration>  
+
+    <property>  
+        <name>javax.jdo.option.ConnectionURL</name>  
+        <value>jdbc:mysql://192.168.222.133:3306/hive?createDatabaseIfNotExist=true</value>  
+    </property>  
+    <property>  
+        <name>javax.jdo.option.ConnectionDriverName</name>  
+        <value>org.mariadb.jdbc.Driver</value>  
+    </property>  
+    <property>  
+        <name>javax.jdo.option.ConnectionUserName</name>  
+        <value>hive1</value>  
+    </property>  
+    <property>  
+        <name>javax.jdo.option.ConnectionPassword</name>  
+        <value>hive1</value>  
+    </property>  
+    <property>  
+        <name>hive.metastore.schema.verification</name>  
+        <value>false</value>  
+    </property>  
+    <property>  
+        <name>hive.metastore.warehouse.dir</name>  
+        <value>hdfs://master:9000/user/hive/warehouse</value>  
+    </property>  
+    <property>  
+        <name>hive.exec.local.scratchdir</name>  
+        <value>/home/hadoop/hd/data/hive/scratchdir</value>  
+    </property>  
+    <property>  
+        <name>hive.downloaded.resources.dir</name>  
+        <value>/home/hadoop/hd/data/hive/resourcesdir</value>  
+    </property>  
+    <property>  
+        <name>hive.querylog.location</name>  
+        <value>/home/hadoop/hd/data/hive/querylog</value>  
+    </property>  
+    <property>  
+        <name>hive.server2.logging.operation.log.location</name>  
+        <value>/home/hadoop/hd/data/hive/operation</value>  
+    </property>  
   
 </configuration>  
 
@@ -477,30 +476,30 @@ $vim /opt/hbase/conf/hbase-site.xml
 
 <configuration>  
 
-  <property>  
-    <name>hbase.cluster.distributed</name>  
-    <value>true</value>  
-  </property>  
-  <property>  
-    <name>hbase.rootdir</name>  
-    <value>hdfs://master:9000/hbase</value>  
-  </property>  
-  <property>  
-    <name>hbase.master</name>  
-    <value>master:60000</value>  
-  </property>  
-  <property>  
-    <name>hbase.zookeeper.quorum</name>  
-    <value>master,slave1,slave2</value>  
-  </property>  
-  <property>  
-    <name>hbase.zookeeper.property.dataDir</name>  
-    <value>/home/hadoop/hd/zookeeper</value>  
-  </property>  
-  <property>  
-    <name>hbase.zookeeper.property.clientPort</name>  
-    <value>2181</value>  
-  </property>  
+    <property>  
+       <name>hbase.cluster.distributed</name>  
+       <value>true</value>  
+    </property>  
+    <property>  
+       <name>hbase.rootdir</name>  
+       <value>hdfs://master:9000/hbase</value>  
+    </property>  
+    <property>  
+       <name>hbase.master</name>  
+       <value>master:60000</value>  
+    </property>  
+    <property>  
+       <name>hbase.zookeeper.quorum</name>  
+       <value>master,slave1,slave2</value>  
+    </property>  
+    <property>  
+       <name>hbase.zookeeper.property.dataDir</name>  
+       <value>/home/hadoop/hd/zookeeper</value>  
+    </property>  
+    <property>  
+       <name>hbase.zookeeper.property.clientPort</name>  
+       <value>2181</value>  
+    </property>  
   
 </configuration>  
 
