@@ -111,7 +111,7 @@ systemctl disable NetworkManager
 
 二、hadoop配置  
 1.hadoop下载、安装  
-这里通过镜像下载，所安装为最新的稳定版hadoop-2.8.1.tar.gz（ctrl+左击即可下载）,如下图，通过Xftp存到master机器/home/hadoop/tmp上，
+这里通过镜像下载，所安装为最新的稳定版[hadoop-2.8.1.tar.gz](https://archive.apache.org/dist/hadoop/core/hadoop-2.8.1/hadoop-2.8.1.tar.gz),如下图，通过Xftp存到master机器/home/hadoop/tmp上，
 随后放到指定目录并解压安装。  
 $mv /home/hadoop/tmp/hadoop-2.8.1.tar.gz /opt/  
 $tar -zvxf hadoop-2.8.1.tar.gz  
@@ -279,8 +279,7 @@ $start-all.sh （或是分别启动start-dfs.sh和start-yarn.sh）
 
 三、hive配置  
 1.hive下载、安装  
-这里通过镜像下载，所安装为最新的稳定版apache-hive-2.3.0-bin.tar.gz  
-（ctrl+左击即可下载）,如下图，通过Xftp存到slave2机器/home/hadoop/tmp上，随后放到指定目录并解压安装。  
+这里通过镜像下载，所安装为最新的稳定版[apache-hive-2.3.0-bin.tar.gz](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-2.3.0/apache-hive-2.3.0-bin.tar.gz),如下图，通过Xftp存到slave2机器/home/hadoop/tmp上，随后放到指定目录并解压安装。  
 $mv /home/hadoop/tmp/apache-hive-2.3.0-bin.tar.gz /opt/  
 $tar -zvxf apache-hive-2.3.0-bin.tar.gz  
 #将解压文件重命名hadoop  
@@ -344,7 +343,7 @@ export HIVE_HOME="/opt/hive"
 export PATH="$HIVE_HOME/bin:$PATH"  
 
 4.复制相关jar包。  
-（1）把mariadb驱动包（mariadb-java-client-2.0.3.jar）拷到hive的lib目录（下载链接：mariadb-java-client-2.1.0.tar.gz,通过Xftp传到  
+（1）把mariadb驱动包（mariadb-java-client-2.0.3.jar）拷到hive的lib目录（下载链接：[mariadb-java-client-2.1.0.tar.gz](https://downloads.mariadb.org/interstitial/connector-java-2.1.0/mariadb-java-client-2.1.0.tar.gz/from/http://mirrors.tuna.tsinghua.edu.cn/mariadb/),通过Xftp传到  
 /home/hadoop/tmp）（mariadb安装在小节后面）  
  ![](pictures/6.png)
  
@@ -464,7 +463,7 @@ shutdown,process,file其中一部分。
 
 四、hbase配置  
 1.hbase下载、安装  
-这里通过镜像下载，所安装为最新的稳定版 hbase-1.3.1-bin.tar.gz（ctrl+左击即可下载）,如下图，通过Xftp存到master机器/home/hadoop/tmp上  
+这里通过镜像下载，所安装为最新的稳定版 [hbase-1.3.1-bin.tar.gz](https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/1.3.1/hbase-1.3.1-bin.tar.gz),如下图，通过Xftp存到master机器/home/hadoop/tmp上  
 （配置好后可用sudo scp将hbase文件包复制到另外两台机器上），随后放到指定目录并解压安装。  
 $mv /home/hadoop/tmp/hbase-1.3.1-bin.tar.gz /opt/  
 $tar -zvxf hbase-1.3.1-bin.tar.gz  
