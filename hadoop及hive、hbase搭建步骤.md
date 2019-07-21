@@ -343,11 +343,11 @@ export HIVE_HOME="/opt/hive"
 export PATH="$HIVE_HOME/bin:$PATH"  
 
 4.复制相关jar包。  
-（1）把mariadb驱动包（mariadb-java-client-2.0.3.jar）拷到hive的lib目录（下载链接：[mariadb-java-client-2.1.0.tar.gz](https://downloads.mariadb.org/interstitial/connector-java-2.1.0/mariadb-java-client-2.1.0.tar.gz/from/http://mirrors.tuna.tsinghua.edu.cn/mariadb/),通过Xftp传到  
+（1）把mariadb驱动包（mariadb-java-client-2.4.2.jar）拷到hive的lib目录（下载链接：[mariadb-java-client-2.4.2.tar.gz](https://downloads.mariadb.org/interstitial/connector-java-2.4.2/mariadb-java-client-2.4.2-sources.jar),通过Xftp传到  
 /home/hadoop/tmp）（mariadb安装在小节后面）  
  ![](pictures/6.png)
  
-$cp /home/hadoop/tmp/mariadb-java-client-2.0.3.jar /opt/hive/lib  
+$cp /home/hadoop/tmp/mariadb-java-client-2.4.2.jar /opt/hive/lib  
 （2）将hive的lib下jline包拷贝到/opt/hadoop/share/hadoop/yarn/lib下，并删除旧版本jline包。  
 $cp /opt/hive/lib/jline-2.12.jar /opt/hadoop/share/hadoop/yarn/lib  
 
