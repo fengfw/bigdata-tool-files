@@ -279,11 +279,11 @@ $start-all.sh （或是分别启动start-dfs.sh和start-yarn.sh）
 
 三、hive配置  
 1.hive下载、安装  
-这里通过镜像下载，所安装为最新的稳定版[apache-hive-2.3.0-bin.tar.gz](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-2.3.0/apache-hive-2.3.0-bin.tar.gz),如下图，通过Xftp存到slave2机器/home/hadoop/tmp上，随后放到指定目录并解压安装。  
-$mv /home/hadoop/tmp/apache-hive-2.3.0-bin.tar.gz /opt/  
-$tar -zvxf apache-hive-2.3.0-bin.tar.gz  
+这里通过镜像下载，所安装为最新的稳定版[apache-hive-2.3.5-bin.tar.gz](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-2.3.5/apache-hive-2.3.5-bin.tar.gz),如下图，通过Xftp存到slave2机器/home/hadoop/tmp上，随后放到指定目录并解压安装。  
+$mv /home/hadoop/tmp/apache-hive-2.3.5-bin.tar.gz /opt/  
+$tar -zvxf apache-hive-2.3.5-bin.tar.gz  
 #将解压文件重命名hadoop  
-$mv apache-hive-2.3.0-bin.tar.gz hive  
+$mv apache-hive-2.3.5-bin.tar.gz hive  
  ![](pictures/5.png)
  
 2.配置hive-site.xml（没有的话，可将hive-site.xml.template复制一份，更名）  
