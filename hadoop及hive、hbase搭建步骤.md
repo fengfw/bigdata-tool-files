@@ -351,21 +351,22 @@ $cp /home/hadoop/tmp/mariadb-java-client-2.4.2.jar /opt/hive/lib
 （2）将hive的lib下jline包拷贝到/opt/hadoop/share/hadoop/yarn/lib下，并删除旧版本jline包。  
 $cp /opt/hive/lib/jline-2.12.jar /opt/hadoop/share/hadoop/yarn/lib  
 
-5.初始化hive数据库
-前提是下面的mariadb数据库已经安装配置好，并完成下面命令，命令为mariadb下
-CREATE DATABASE hive; 
-USE hive; 
-CREATE USER 'hive'@'localhost' IDENTIFIED BY 'hive';
-GRANT ALL ON hive.* TO 'hive'@'localhost' IDENTIFIED BY 'hive'; 
-GRANT ALL ON hive.* TO 'hive'@'%' IDENTIFIED BY 'hive'; 
-FLUSH PRIVILEGES; 
-quit;
+5.初始化hive数据库  
 
-之后在hive主目录下执行初始化命令
-schematool -dbType mysql -initSchema
+前提是下面的mariadb数据库已经安装配置好，并完成下面命令，命令为mariadb下  
+CREATE DATABASE hive;  
+USE hive;  
+CREATE USER 'hive'@'localhost' IDENTIFIED BY 'hive';  
+GRANT ALL ON hive.* TO 'hive'@'localhost' IDENTIFIED BY 'hive';   
+GRANT ALL ON hive.* TO 'hive'@'%' IDENTIFIED BY 'hive';  
+FLUSH PRIVILEGES;  
+quit;  
+
+之后在hive主目录下执行初始化命令  
+schematool -dbType mysql -initSchema  
 
 6.启动hive  
-$$HIVE_HOME/bin/./hive  
+$HIVE_HOME/bin/./hive  
 
 之后进入hive中，即可使用hive数据库（操作等同mysql）,如下图。  
   ![](pictures/7.png)
